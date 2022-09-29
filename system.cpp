@@ -15,15 +15,7 @@ void add_patient()
     cout << "enter specialization, name, status : " << endl;
     cin >> special >> name >> status;
 
-    //cheking for available place
-    for (int i = 0; i < 5; i++)
-        {   
-            if (regester[special][i] == -1)
-            {
-                flag = 0;
-            }
-        }
-    if (flag)
+    if (countp[special] == 5)
     {
         cout << "Sorry the specialization is full" << endl;
         return;
