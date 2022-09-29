@@ -110,6 +110,10 @@ int main()
     while (true)
     {
         cout << "Enter your choice :" << endl;
+        cout << "1) Add new patient" << endl;
+        cout << "2) Print all patients" << endl;
+        cout << "3) Get ext patient" << endl;
+        cout << "4) Exit" << endl;
         int choice;
         cin >> choice;
         if (!(choice >= 1 && choice <= 4))
