@@ -10,7 +10,6 @@ int countp[20];
 void add_patient()
 {
     int special,status;
-    int flag = 1;
     string name;
     cout << "enter specialization, name, status : " << endl;
     cin >> special >> name >> status;
@@ -39,7 +38,7 @@ void add_patient()
     }
     else //urgent
     {
-        for (int i = countp[special]; i > 0; i--)
+        for (int i = countp[special]; i > 0; i--) // shifting elements to the right
         {   
             regester[special][i] = regester[special][i-1];
             names[special][i] = names[special][i-1];
@@ -83,7 +82,7 @@ void next_patient()
     else
     {
         cout << names[special][0] << " please go with the Dr" << endl;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++) // shifting elements to the left
         {
             names[special][i] = names[special][i+1];
             regester[special][i] = regester[special][i+1];
